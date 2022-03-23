@@ -2,6 +2,7 @@ import React from "react";
 import "./SingleCard.css";
 
 const SingleCard = ({ card, handleChoice, flipped, disabled }) => {
+    
   const handleClick = () => {
     if (!disabled) {
       handleChoice(card);
@@ -16,7 +17,8 @@ const SingleCard = ({ card, handleChoice, flipped, disabled }) => {
           className="back"
           src="img/cover.png"
           alt="card back"
-          onClick={handleClick}
+          // img can be clicked on just if the flipped value is true
+          onClick={() => !flipped && handleClick()}
         />
       </div>
     </div>
