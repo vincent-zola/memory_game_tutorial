@@ -66,7 +66,7 @@ const App = () => {
     // ALL dependencies should be included
   }, [choiceOne, choiceTwo]);
 
-  console.log(cards);
+  
 
   // reset choices & increase turn
   const resetTurn = () => {
